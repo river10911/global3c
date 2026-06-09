@@ -14,10 +14,10 @@ link: "https://www.amazon.co.jp/s?k=iPhone+17"
 {
 country: "韓國",
 flag: "🇰🇷",
-platform: "Coupang",
+platform: "Gmarket",
 currency: "KRW",
 price: 1250000,
-link: "https://www.coupang.com/np/search?q=iPhone+17"
+link: "https://browse.gmarket.co.kr/search?keyword=iPhone%2017"
 },
 {
 country: "香港",
@@ -60,10 +60,10 @@ link: "https://www.amazon.co.jp/s?k=iPhone+17+Pro"
 {
 country: "韓國",
 flag: "🇰🇷",
-platform: "Coupang",
+platform: "Gmarket",
 currency: "KRW",
 price: 1550000,
-link: "https://www.coupang.com/np/search?q=iPhone+17+Pro"
+link: "https://browse.gmarket.co.kr/search?keyword=iPhone%2017%20Pro"
 },
 {
 country: "香港",
@@ -106,10 +106,10 @@ link: "https://www.amazon.co.jp/s?k=AirPods+Pro"
 {
 country: "韓國",
 flag: "🇰🇷",
-platform: "Coupang",
+platform: "Gmarket",
 currency: "KRW",
 price: 289000,
-link: "https://www.coupang.com/np/search?q=AirPods+Pro"
+link: "https://browse.gmarket.co.kr/search?keyword=AirPods%20Pro"
 },
 {
 country: "香港",
@@ -152,10 +152,10 @@ link: "https://www.amazon.co.jp/s?k=MacBook+Air"
 {
 country: "韓國",
 flag: "🇰🇷",
-platform: "Coupang",
+platform: "Gmarket",
 currency: "KRW",
 price: 1590000,
-link: "https://www.coupang.com/np/search?q=MacBook+Air"
+link: "https://browse.gmarket.co.kr/search?keyword=MacBook%20Air"
 },
 {
 country: "香港",
