@@ -1,62 +1,185 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全球 iPhone 17 比價網</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Global3C 全球 Apple 商品比價</title>
+
+<meta name="description"
+content="比較台灣、日本、韓國、香港、美國 Apple 商品價格與預估到手價">
+
+<meta name="keywords"
+content="iPhone比價,日本iPhone,香港iPhone,Apple比價,全球比價">
+
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 p-4 md:p-8">
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-3xl font-bold text-center mb-6 text-gray-800" id="productTitle">Loading...</h1>
-        <div id="cardsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            </div>
+
+<body>
+
+<header class="header">
+    <div class="container">
+        <h1>🌎 Global3C</h1>
+        <p>全球 Apple 商品比價引擎</p>
     </div>
+</header>
 
-    <script>
-        async function loadData() {
-            try {
-                const response = await fetch('data.json?t=' + new Date().getTime());
-                const data = await response.json();
-                
-                document.getElementById('productTitle').innerText = data.currentProductTitle;
-                const container = document.getElementById('cardsContainer');
-                container.innerHTML = '';
+<section class="hero">
+    <div class="container">
 
-                data.regionsData.forEach(region => {
-                    let productsHtml = '';
-                    for (const [spec, info] of Object.entries(region.products)) {
-                        productsHtml += `
-                            <div class="flex justify-between py-1 border-b">
-                                <span>${spec}</span>
-                                <span class="font-bold">${region.currency} ${info.price.toLocaleString()}</span>
-                            </div>
-                            <a href="${info.link}" target="_blank" class="block text-center mt-2 bg-blue-600 text-white py-1 rounded hover:bg-blue-700 text-sm">
-                                前往查看
-                            </a>
-                        `;
-                    }
+        <h2>搜尋全球 Apple 商品價格</h2>
 
-                    const card = `
-                        <div class="bg-white p-6 rounded-xl shadow-lg">
-                            <div class="flex items-center justify-between mb-4">
-                                <h2 class="text-xl font-bold">${region.flag} ${region.country} - ${region.platform}</h2>
-                            </div>
-                            ${productsHtml}
-                            <div class="mt-4 text-xs text-gray-500">
-                                <p>預估運費: ${region.shipping.text} (${region.shipping.cost})</p>
-                            </div>
-                        </div>
-                    `;
-                    container.innerHTML += card;
-                });
-            } catch (error) {
-                console.error('Error loading data:', error);
-                document.body.innerHTML = '<h1 class="text-center mt-20 text-red-500">無法讀取資料，請檢查 data.json 格式！</h1>';
-            }
-        }
-        loadData();
-    </script>
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="例如：iPhone 17 Pro">
+
+            <button onclick="searchProduct()">
+                搜尋
+            </button>
+
+        </div>
+
+        <div class="quick-tags">
+
+            <button onclick="quickSearch('iphone 17')">
+                iPhone 17
+            </button>
+
+            <button onclick="quickSearch('iphone 17 pro')">
+                iPhone 17 Pro
+            </button>
+
+            <button onclick="quickSearch('airpods pro')">
+                AirPods Pro
+            </button>
+
+            <button onclick="quickSearch('macbook air')">
+                MacBook Air
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="container">
+
+    <div id="results"></div>
+
+</section>
+
+<script src="products.js"></script>
+
+<script>
+
+function quickSearch(keyword){
+
+    document.getElementById("searchInput").value = keyword;
+
+    searchProduct();
+
+}
+
+function searchProduct(){
+
+    const keyword =
+        document
+        .getElementById("searchInput")
+        .value
+        .trim()
+        .toLowerCase();
+
+    const resultDiv =
+        document.getElementById("results");
+
+    resultDiv.innerHTML = "";
+
+    const product = products[keyword];
+
+    if(!product){
+
+        resultDiv.innerHTML =
+        `
+        <div class="empty">
+            找不到商品資料
+        </div>
+        `;
+
+        return;
+    }
+
+    const sorted =
+        [...product.prices]
+        .sort((a,b)=>a.twd-b.twd);
+
+    let html =
+    `
+    <div class="product-header">
+
+        <h2>${product.name}</h2>
+
+        <p>
+            共找到 ${sorted.length} 個市場價格
+        </p>
+
+    </div>
+    `;
+
+    sorted.forEach((item,index)=>{
+
+        const rank =
+        index === 0
+        ? `<span class="badge">最便宜</span>`
+        : "";
+
+        html +=
+        `
+        <div class="card">
+
+            <div class="card-top">
+
+                <div>
+                    <h3>
+                        ${item.flag}
+                        ${item.platform}
+                    </h3>
+
+                    <small>
+                        ${item.country}
+                    </small>
+                </div>
+
+                ${rank}
+
+            </div>
+
+            <div class="price">
+
+                NT$
+                ${item.twd.toLocaleString()}
+
+            </div>
+
+            <a
+                href="${item.link}"
+                target="_blank"
+                class="btn-link">
+
+                前往查看
+
+            </a>
+
+        </div>
+        `;
+    });
+
+    resultDiv.innerHTML = html;
+}
+
+</script>
+
 </body>
 </html>
