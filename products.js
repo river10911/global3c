@@ -57,43 +57,68 @@ name:"iPhone 17 Pro",
 prices:[
 
 {
-country:"日本",
-flag:"🇯🇵",
-platform:"Amazon JP",
-twd:35800,
-link:"https://www.amazon.co.jp/s?k=iPhone+17+Pro"
+    country:"日本",
+    flag:"🇯🇵",
+    platform:"Amazon JP",
+
+    currency:"JPY",
+    originalPrice:"¥169,800",
+
+    twd:35800,
+
+    link:"https://www.amazon.co.jp/s?k=iPhone+17+Pro"
 },
 
 {
-country:"香港",
-flag:"🇭🇰",
-platform:"Apple HK",
-twd:36100,
-link:"https://www.apple.com/hk/"
+    country:"香港",
+    flag:"🇭🇰",
+    platform:"Apple HK",
+
+    currency:"HKD",
+    originalPrice:"HK$8,999",
+
+    twd:36100,
+
+    link:"https://www.apple.com/hk/"
 },
 
 {
-country:"韓國",
-flag:"🇰🇷",
-platform:"Coupang",
-twd:36400,
-link:"https://www.coupang.com/np/search?q=iPhone+17+Pro"
+    country:"韓國",
+    flag:"🇰🇷",
+    platform:"Coupang",
+
+    currency:"KRW",
+    originalPrice:"₩1,550,000",
+
+    twd:36400,
+
+    link:"https://www.coupang.com/np/search?q=iPhone+17+Pro"
 },
 
 {
-country:"美國",
-flag:"🇺🇸",
-platform:"Apple US",
-twd:36900,
-link:"https://www.apple.com/iphone/"
+    country:"美國",
+    flag:"🇺🇸",
+    platform:"Apple US",
+
+    currency:"USD",
+    originalPrice:"US$1,099",
+
+    twd:36900,
+
+    link:"https://www.apple.com/iphone/"
 },
 
 {
-country:"台灣",
-flag:"🇹🇼",
-platform:"momo",
-twd:40900,
-link:"https://www.momoshop.com.tw/search/searchShop.jsp?keyword=iPhone+17+Pro"
+    country:"台灣",
+    flag:"🇹🇼",
+    platform:"momo",
+
+    currency:"TWD",
+    originalPrice:"NT$40,900",
+
+    twd:40900,
+
+    link:"https://www.momoshop.com.tw/search/searchShop.jsp?keyword=iPhone+17+Pro"
 }
 
 ]
