@@ -1,5 +1,5 @@
 {
-  "currentProductTitle": "iPhone 17",
+  "currentProductTitle": "iPhone 17 價格比較表",
   "lastUpdated": "2026-06-09 16:00:00",
   "exchangeRates": {
     "TWD": 1,
@@ -19,11 +19,7 @@
         "256GB": { "price": 32900, "link": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=iPhone%2017%20256G" }
       },
       "shipping": { "cost": 0, "text": "國內免運" },
-      "taxRate": 0,
-      "tags": [
-        { "text": "原廠保固", "type": "success", "icon": "fa-shield-halved" },
-        { "text": "免運費", "type": "info", "icon": "fa-truck-fast" }
-      ]
+      "taxRate": 0
     },
     {
       "id": "jp",
@@ -36,11 +32,7 @@
         "256GB": { "price": 139800, "link": "https://www.amazon.co.jp/s?k=iPhone+17+256GB" }
       },
       "shipping": { "cost": 3500, "text": "Amazon 國際直郵" },
-      "taxRate": 0.05,
-      "tags": [
-        { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" },
-        { "text": "預收關稅", "type": "info", "icon": "fa-box-open" }
-      ]
+      "taxRate": 0.05
     },
     {
       "id": "hk",
@@ -53,11 +45,7 @@
         "256GB": { "price": 7699, "link": "https://www.apple.com/hk/search/iPhone-17-256GB?src=globalnav" }
       },
       "shipping": { "cost": 150, "text": "第三方集運 (預估)" },
-      "taxRate": 0.05,
-      "tags": [
-        { "text": "實體雙卡", "type": "special", "icon": "fa-sim-card" },
-        { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" }
-      ]
+      "taxRate": 0.05
     },
     {
       "id": "kr",
@@ -70,10 +58,7 @@
         "256GB": { "price": 1400000, "link": "https://www.coupang.com/np/search?q=iPhone+17+256GB" }
       },
       "shipping": { "cost": 30000, "text": "第三方集運 (預估)" },
-      "taxRate": 0.05,
-      "tags": [
-        { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" }
-      ]
+      "taxRate": 0.05
     }
   ]
 }
