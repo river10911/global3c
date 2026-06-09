@@ -133,4 +133,9 @@ flex-direction:column;
 width:100%;
 }
 
+.original-price{
+    color:#6b7280;
+    font-size:15px;
+    margin-top:10px;
+}
 }
