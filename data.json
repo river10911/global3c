@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-09 15:40:00",
-  "currentProductTitle": "Apple AirPods Pro 2",
+  "currentProductTitle": "iPhone 17",
+  "lastUpdated": "2026-06-09 16:00:00",
   "exchangeRates": {
     "TWD": 1,
     "JPY": 0.21,
@@ -15,8 +15,8 @@
       "flag": "🇹🇼",
       "currency": "TWD",
       "products": {
-        "Type-C版": { "price": 7490, "link": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11942055" },
-        "Lightning版": { "price": 6490, "link": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10556272" }
+        "128GB": { "price": 28900, "link": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=iPhone%2017%20128G" },
+        "256GB": { "price": 32900, "link": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=iPhone%2017%20256G" }
       },
       "shipping": { "cost": 0, "text": "國內免運" },
       "taxRate": 0,
@@ -32,9 +32,44 @@
       "flag": "🇯🇵",
       "currency": "JPY",
       "products": {
-        "Type-C版": { "price": 34000, "link": "https://www.amazon.co.jp/dp/B0CHX68YFG" }
+        "128GB": { "price": 124800, "link": "https://www.amazon.co.jp/s?k=iPhone+17+128GB" },
+        "256GB": { "price": 139800, "link": "https://www.amazon.co.jp/s?k=iPhone+17+256GB" }
       },
-      "shipping": { "cost": 2500, "text": "Amazon 國際直郵" },
+      "shipping": { "cost": 3500, "text": "Amazon 國際直郵" },
+      "taxRate": 0.05,
+      "tags": [
+        { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" },
+        { "text": "預收關稅", "type": "info", "icon": "fa-box-open" }
+      ]
+    },
+    {
+      "id": "hk",
+      "country": "香港",
+      "platform": "Apple 官網",
+      "flag": "🇭🇰",
+      "currency": "HKD",
+      "products": {
+        "128GB": { "price": 6899, "link": "https://www.apple.com/hk/search/iPhone-17-128GB?src=globalnav" },
+        "256GB": { "price": 7699, "link": "https://www.apple.com/hk/search/iPhone-17-256GB?src=globalnav" }
+      },
+      "shipping": { "cost": 150, "text": "第三方集運 (預估)" },
+      "taxRate": 0.05,
+      "tags": [
+        { "text": "實體雙卡", "type": "special", "icon": "fa-sim-card" },
+        { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" }
+      ]
+    },
+    {
+      "id": "kr",
+      "country": "韓國",
+      "platform": "Coupang",
+      "flag": "🇰🇷",
+      "currency": "KRW",
+      "products": {
+        "128GB": { "price": 1250000, "link": "https://www.coupang.com/np/search?q=iPhone+17+128GB" },
+        "256GB": { "price": 1400000, "link": "https://www.coupang.com/np/search?q=iPhone+17+256GB" }
+      },
+      "shipping": { "cost": 30000, "text": "第三方集運 (預估)" },
       "taxRate": 0.05,
       "tags": [
         { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" }
