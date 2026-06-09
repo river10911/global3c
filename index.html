@@ -156,12 +156,19 @@ function searchProduct(){
 
             </div>
 
-            <div class="price">
+            <div class="original-price">
 
-                NT$
-                ${item.twd.toLocaleString()}
+    原價：
+    ${item.originalPrice}
 
-            </div>
+</div>
+
+<div class="price">
+
+    NT$
+    ${item.twd.toLocaleString()}
+
+</div>
 
             <a
                 href="${item.link}"
