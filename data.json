@@ -1,0 +1,80 @@
+{
+  "lastUpdated": "2026-06-09 09:00:00",
+  "exchangeRates": {
+    "TWD": 1,
+    "JPY": 0.21,
+    "HKD": 4.1,
+    "KRW": 0.024
+  },
+  "regionsData": [
+    {
+      "id": "tw",
+      "country": "台灣",
+      "platform": "momo 購物網",
+      "flag": "🇹🇼",
+      "currency": "TWD",
+      "products": {
+        "128": { "price": 28900, "link": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=128GB_ITEM_CODE" },
+        "256": { "price": 32900, "link": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=256GB_ITEM_CODE" }
+      },
+      "shipping": { "cost": 0, "text": "國內免運" },
+      "taxRate": 0,
+      "tags": [
+        { "text": "原廠保固", "type": "success", "icon": "fa-shield-halved" },
+        { "text": "免運費", "type": "info", "icon": "fa-truck-fast" },
+        { "text": "無關稅", "type": "info", "icon": "fa-file-invoice-dollar" }
+      ]
+    },
+    {
+      "id": "jp",
+      "country": "日本",
+      "platform": "Amazon JP",
+      "flag": "🇯🇵",
+      "currency": "JPY",
+      "products": {
+        "128": { "price": 124800, "link": "https://www.amazon.co.jp/dp/128GB_ASIN_CODE" },
+        "256": { "price": 139800, "link": "https://www.amazon.co.jp/dp/256GB_ASIN_CODE" }
+      },
+      "shipping": { "cost": 3500, "text": "Amazon 國際直郵" },
+      "taxRate": 0.05,
+      "tags": [
+        { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" },
+        { "text": "匯率優勢", "type": "success", "icon": "fa-arrow-trend-down" },
+        { "text": "預收關稅", "type": "info", "icon": "fa-box-open" }
+      ]
+    },
+    {
+      "id": "hk",
+      "country": "香港",
+      "platform": "Apple 官網",
+      "flag": "🇭🇰",
+      "currency": "HKD",
+      "products": {
+        "128": { "price": 6899, "link": "https://www.apple.com/hk/shop/buy-iphone/iphone-17/128gb" },
+        "256": { "price": 7699, "link": "https://www.apple.com/hk/shop/buy-iphone/iphone-17/256gb" }
+      },
+      "shipping": { "cost": 150, "text": "第三方集運 (預估)" },
+      "taxRate": 0.05,
+      "tags": [
+        { "text": "實體雙卡", "type": "special", "icon": "fa-sim-card" },
+        { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" }
+      ]
+    },
+    {
+      "id": "kr",
+      "country": "韓國",
+      "platform": "Coupang",
+      "flag": "🇰🇷",
+      "currency": "KRW",
+      "products": {
+        "128": { "price": 1250000, "link": "https://www.coupang.com/vp/products/128GB_PRODUCT_CODE" },
+        "256": { "price": 1400000, "link": "https://www.coupang.com/vp/products/256GB_PRODUCT_CODE" }
+      },
+      "shipping": { "cost": 30000, "text": "第三方集運 (預估)" },
+      "taxRate": 0.05,
+      "tags": [
+        { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" }
+      ]
+    }
+  ]
+}
