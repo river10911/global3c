@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
@@ -27,47 +28,52 @@ content="iPhone比價,日本iPhone,香港iPhone,Apple比價,全球比價">
 <section class="hero">
     <div class="container">
 
-        <h2>搜尋全球 Apple 商品價格</h2>
+```
+    <h2>搜尋全球 Apple 商品價格</h2>
 
-        <div class="search-box">
+    <div class="search-box">
 
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="例如：iPhone 17 Pro">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="例如：iPhone 17 Pro">
 
-            <button onclick="searchProduct()">
-                搜尋
-            </button>
-
-        </div>
-
-        <div class="quick-tags">
-
-            <button onclick="quickSearch('iphone 17')">
-                iPhone 17
-            </button>
-
-            <button onclick="quickSearch('iphone 17 pro')">
-                iPhone 17 Pro
-            </button>
-
-            <button onclick="quickSearch('airpods pro')">
-                AirPods Pro
-            </button>
-
-            <button onclick="quickSearch('macbook air')">
-                MacBook Air
-            </button>
-
-        </div>
+        <button onclick="searchProduct()">
+            搜尋
+        </button>
 
     </div>
+
+    <div class="quick-tags">
+
+        <button onclick="quickSearch('iphone 17')">
+            iPhone 17
+        </button>
+
+        <button onclick="quickSearch('iphone 17 pro')">
+            iPhone 17 Pro
+        </button>
+
+        <button onclick="quickSearch('airpods pro')">
+            AirPods Pro
+        </button>
+
+        <button onclick="quickSearch('macbook air')">
+            MacBook Air
+        </button>
+
+    </div>
+
+</div>
+```
+
 </section>
 
 <section class="container">
 
-    <div id="results"></div>
+```
+<div id="results"></div>
+```
 
 </section>
 
@@ -156,19 +162,13 @@ function searchProduct(){
 
             </div>
 
-            <div class="original-price">
+            <div class="local-price">
+                ${item.localPrice}
+            </div>
 
-    原價：
-    ${item.originalPrice}
-
-</div>
-
-<div class="price">
-
-    NT$
-    ${item.twd.toLocaleString()}
-
-</div>
+            <div class="price">
+                NT$ ${item.twd.toLocaleString()}
+            </div>
 
             <a
                 href="${item.link}"
