@@ -156,7 +156,7 @@
                 platform: 'momo 購物網',
                 flag: '🇹🇼',
                 currency: 'TWD',
-                link: '#',
+                link: 'https://www.momoshop.com.tw/category/LgrpCategory.jsp?l_code=2116900000',
                 products: {
                     '128': { price: 28900 },
                     '256': { price: 32900 }
@@ -175,7 +175,7 @@
                 platform: 'Amazon JP',
                 flag: '🇯🇵',
                 currency: 'JPY',
-                link: '#',
+                link: 'https://www.amazon.co.jp/apple',
                 products: {
                     '128': { price: 124800 },
                     '256': { price: 139800 }
@@ -194,7 +194,7 @@
                 platform: 'Apple 官網',
                 flag: '🇭🇰',
                 currency: 'HKD',
-                link: '#',
+                link: 'https://www.apple.com/hk/iphone/',
                 products: {
                     '128': { price: 6899 },
                     '256': { price: 7699 }
@@ -212,7 +212,7 @@
                 platform: 'Coupang',
                 flag: '🇰🇷',
                 currency: 'KRW',
-                link: '#',
+                link: 'https://www.coupang.com/np/campaigns/8297',
                 products: {
                     '128': { price: 1250000 },
                     '256': { price: 1400000 }
@@ -362,7 +362,7 @@
                                     <span class="text-xl font-bold text-gray-900">NT$</span>
                                     <span class="text-3xl font-extrabold text-${isCheapest ? 'blue-600' : 'gray-900'}">${formatMoney(result.totalCost)}</span>
                                 </div>
-                                <a href="${result.link}" onclick="alert('這是 MVP 原型，導購連結尚未開通。'); return false;" class="mt-3 w-full md:w-auto text-center bg-gray-900 hover:bg-gray-800 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
+                                <a href="${result.link}" target="_blank" rel="noopener noreferrer" class="mt-3 w-full md:w-auto text-center bg-gray-900 hover:bg-gray-800 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
                                     前往查看 <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
                                 </a>
                             </div>
