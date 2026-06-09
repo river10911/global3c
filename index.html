@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
@@ -10,12 +9,9 @@
 <meta name="description"
 content="比較台灣、日本、韓國、香港、美國 Apple 商品價格與預估到手價">
 
-<meta name="keywords"
-content="iPhone比價,日本iPhone,香港iPhone,Apple比價,全球比價">
-
 <link rel="stylesheet" href="style.css">
-</head>
 
+</head>
 <body>
 
 <header class="header">
@@ -26,54 +22,51 @@ content="iPhone比價,日本iPhone,香港iPhone,Apple比價,全球比價">
 </header>
 
 <section class="hero">
+
     <div class="container">
 
-```
-    <h2>搜尋全球 Apple 商品價格</h2>
+        <h2>搜尋全球 Apple 商品價格</h2>
 
-    <div class="search-box">
+        <div class="search-box">
 
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="例如：iPhone 17 Pro">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="例如：iPhone 17 Pro">
 
-        <button onclick="searchProduct()">
-            搜尋
-        </button>
+            <button onclick="searchProduct()">
+                搜尋
+            </button>
+
+        </div>
+
+        <div class="quick-tags">
+
+            <button onclick="quickSearch('iphone 17')">
+                iPhone 17
+            </button>
+
+            <button onclick="quickSearch('iphone 17 pro')">
+                iPhone 17 Pro
+            </button>
+
+            <button onclick="quickSearch('airpods pro')">
+                AirPods Pro
+            </button>
+
+            <button onclick="quickSearch('macbook air')">
+                MacBook Air
+            </button>
+
+        </div>
 
     </div>
-
-    <div class="quick-tags">
-
-        <button onclick="quickSearch('iphone 17')">
-            iPhone 17
-        </button>
-
-        <button onclick="quickSearch('iphone 17 pro')">
-            iPhone 17 Pro
-        </button>
-
-        <button onclick="quickSearch('airpods pro')">
-            AirPods Pro
-        </button>
-
-        <button onclick="quickSearch('macbook air')">
-            MacBook Air
-        </button>
-
-    </div>
-
-</div>
-```
 
 </section>
 
 <section class="container">
 
-```
-<div id="results"></div>
-```
+    <div id="results"></div>
 
 </section>
 
@@ -103,7 +96,19 @@ function searchProduct(){
 
     resultDiv.innerHTML = "";
 
-    const product = products[keyword];
+    let product = null;
+
+    for(const key in products){
+
+        if(
+            key.includes(keyword) ||
+            keyword.includes(key)
+        ){
+            product = products[key];
+            break;
+        }
+
+    }
 
     if(!product){
 
@@ -136,10 +141,10 @@ function searchProduct(){
 
     sorted.forEach((item,index)=>{
 
-        const rank =
-        index === 0
-        ? `<span class="badge">最便宜</span>`
-        : "";
+        const badge =
+            index === 0
+            ? '<span class="badge">最便宜</span>'
+            : '';
 
         html +=
         `
@@ -148,6 +153,7 @@ function searchProduct(){
             <div class="card-top">
 
                 <div>
+
                     <h3>
                         ${item.flag}
                         ${item.platform}
@@ -156,9 +162,10 @@ function searchProduct(){
                     <small>
                         ${item.country}
                     </small>
+
                 </div>
 
-                ${rank}
+                ${badge}
 
             </div>
 
@@ -184,6 +191,7 @@ function searchProduct(){
     });
 
     resultDiv.innerHTML = html;
+
 }
 
 </script>
