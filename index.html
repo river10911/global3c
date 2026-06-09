@@ -123,7 +123,7 @@
             'KRW': 0.024   
         };
 
-        // 2. 各地區與平台資料庫 (已修改為不同容量獨立連結)
+        // 2. 各地區與平台資料庫 (動態商品連結結構)
         const regionsData = [
             {
                 id: 'tw',
@@ -134,11 +134,11 @@
                 products: {
                     '128': { 
                         price: 28900, 
-                        link: 'https://www.momoshop.com.tw/goods/128GB的專屬網址' 
+                        link: 'https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=128GB_ITEM_CODE' 
                     },
                     '256': { 
                         price: 32900, 
-                        link: 'https://www.momoshop.com.tw/goods/256GB的專屬網址' 
+                        link: 'https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=256GB_ITEM_CODE' 
                     }
                 },
                 shipping: { cost: 0, text: '國內免運' },
@@ -158,11 +158,11 @@
                 products: {
                     '128': { 
                         price: 124800, 
-                        link: 'https://www.amazon.co.jp/dp/128GB的專屬網址' 
+                        link: 'https://www.amazon.co.jp/dp/128GB_ASIN_CODE' 
                     },
                     '256': { 
                         price: 139800, 
-                        link: 'https://www.amazon.co.jp/dp/256GB的專屬網址' 
+                        link: 'https://www.amazon.co.jp/dp/256GB_ASIN_CODE' 
                     }
                 },
                 shipping: { cost: 3500, text: 'Amazon 國際直郵' },
@@ -182,11 +182,11 @@
                 products: {
                     '128': { 
                         price: 6899, 
-                        link: 'https://www.apple.com/hk/shop/buy-iphone/128GB的專屬網址' 
+                        link: 'https://www.apple.com/hk/shop/buy-iphone/iphone-17/128gb' 
                     },
                     '256': { 
                         price: 7699, 
-                        link: 'https://www.apple.com/hk/shop/buy-iphone/256GB的專屬網址' 
+                        link: 'https://www.apple.com/hk/shop/buy-iphone/iphone-17/256gb' 
                     }
                 },
                 shipping: { cost: 150, text: '第三方集運 (預估)' },
@@ -205,11 +205,11 @@
                 products: {
                     '128': { 
                         price: 1250000, 
-                        link: 'https://www.coupang.com/vp/products/128GB的專屬網址' 
+                        link: 'https://www.coupang.com/vp/products/128GB_PRODUCT_CODE' 
                     },
                     '256': { 
                         price: 1400000, 
-                        link: 'https://www.coupang.com/vp/products/256GB的專屬網址' 
+                        link: 'https://www.coupang.com/vp/products/256GB_PRODUCT_CODE' 
                     }
                 },
                 shipping: { cost: 30000, text: '第三方集運 (預估)' },
@@ -312,7 +312,7 @@
                     card.className = `price-card bg-white rounded-2xl p-5 border ${isCheapest ? 'border-blue-400 ring-1 ring-blue-400 shadow-md relative overflow-hidden' : 'border-gray-200'} fade-in`;
                     card.style.animationDelay = `${index * 0.1}s`;
 
-                    // 將超連結換成 result.currentProductLink
+                    // 將超連結換成 result.currentProductLink，並加上 target="_blank"
                     card.innerHTML = `
                         ${isCheapest ? '<div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">最划算推薦</div>' : ''}
                         
