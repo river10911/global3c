@@ -33,7 +33,7 @@
       "currency": "JPY",
       "products": {
         "128": { "price": 124800, "link": "https://www.amazon.co.jp/dp/128GB_ASIN_CODE" },
-        "256": { "price": 139800, "link": "https://www.amazon.co.jp/dp/256GB_ASIN_CODE" }
+        "256": { "price": 139800, "link": "https://www.amazon.co.jp/-/zh/dp/B0FQG97CDB/ref=sr_1_1?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&crid=3F31N2SLNXMXK&dib=eyJ2IjoiMSJ9.X-pXsuxO3GPD_6vpiIBkjO_cq4SB_WmHCSeKv13L3tbHL8DA_s_LC7u8cuBbszHOcOYosf4rp1S92wT3BJdbkR46OaptjwmTJMsBPt43wz_P9DlEv94CEgS5WR9qJCpwGh_2jHYCXsSDWN3IC_A9MDTnGVdDvatsw9w2FA14yUIFEi9ba4lbixZuP2S77VDwbTXkio10GtBod5nWvDZznM9sgR9m-t82UGX5-iMZtJI1tFTHxVqoB2Oqt8hx2OX27nvYIHup55VNP-UioQ2XdAVccKYCSmb-2vD2XcZJfXg.UCpSeA6fbBDnVIQUfKEa00r50t6rWcwUCCo19oDVg_c&dib_tag=se&keywords=iphone%2B17&qid=1780989831&sprefix=iphone17%2Caps%2C289&sr=8-1&th=1" }
       },
       "shipping": { "cost": 3500, "text": "Amazon 國際直郵" },
       "taxRate": 0.05,
