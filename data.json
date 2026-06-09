@@ -1,5 +1,6 @@
 {
-  "lastUpdated": "2026-06-09 09:00:00",
+  "lastUpdated": "2026-06-09 15:40:00",
+  "currentProductTitle": "Apple AirPods Pro 2",
   "exchangeRates": {
     "TWD": 1,
     "JPY": 0.21,
@@ -14,15 +15,14 @@
       "flag": "🇹🇼",
       "currency": "TWD",
       "products": {
-        "128": { "price": 28900, "link": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=128GB_ITEM_CODE" },
-        "256": { "price": 32900, "link": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=256GB_ITEM_CODE" }
+        "Type-C版": { "price": 7490, "link": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11942055" },
+        "Lightning版": { "price": 6490, "link": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10556272" }
       },
       "shipping": { "cost": 0, "text": "國內免運" },
       "taxRate": 0,
       "tags": [
         { "text": "原廠保固", "type": "success", "icon": "fa-shield-halved" },
-        { "text": "免運費", "type": "info", "icon": "fa-truck-fast" },
-        { "text": "無關稅", "type": "info", "icon": "fa-file-invoice-dollar" }
+        { "text": "免運費", "type": "info", "icon": "fa-truck-fast" }
       ]
     },
     {
@@ -32,45 +32,9 @@
       "flag": "🇯🇵",
       "currency": "JPY",
       "products": {
-        "128": { "price": 124800, "link": "https://www.amazon.co.jp/dp/128GB_ASIN_CODE" },
-        "256": { "price": 139800, "link": "https://www.amazon.co.jp/-/zh/dp/B0FQG97CDB/ref=sr_1_1?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&crid=3F31N2SLNXMXK&dib=eyJ2IjoiMSJ9.X-pXsuxO3GPD_6vpiIBkjO_cq4SB_WmHCSeKv13L3tbHL8DA_s_LC7u8cuBbszHOcOYosf4rp1S92wT3BJdbkR46OaptjwmTJMsBPt43wz_P9DlEv94CEgS5WR9qJCpwGh_2jHYCXsSDWN3IC_A9MDTnGVdDvatsw9w2FA14yUIFEi9ba4lbixZuP2S77VDwbTXkio10GtBod5nWvDZznM9sgR9m-t82UGX5-iMZtJI1tFTHxVqoB2Oqt8hx2OX27nvYIHup55VNP-UioQ2XdAVccKYCSmb-2vD2XcZJfXg.UCpSeA6fbBDnVIQUfKEa00r50t6rWcwUCCo19oDVg_c&dib_tag=se&keywords=iphone%2B17&qid=1780989831&sprefix=iphone17%2Caps%2C289&sr=8-1&th=1" }
+        "Type-C版": { "price": 34000, "link": "https://www.amazon.co.jp/dp/B0CHX68YFG" }
       },
-      "shipping": { "cost": 3500, "text": "Amazon 國際直郵" },
-      "taxRate": 0.05,
-      "tags": [
-        { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" },
-        { "text": "匯率優勢", "type": "success", "icon": "fa-arrow-trend-down" },
-        { "text": "預收關稅", "type": "info", "icon": "fa-box-open" }
-      ]
-    },
-    {
-      "id": "hk",
-      "country": "香港",
-      "platform": "Apple 官網",
-      "flag": "🇭🇰",
-      "currency": "HKD",
-      "products": {
-        "128": { "price": 6899, "link": "https://www.apple.com/hk/shop/buy-iphone/iphone-17/128gb" },
-        "256": { "price": 7699, "link": "https://www.apple.com/hk/shop/buy-iphone/iphone-17/256gb" }
-      },
-      "shipping": { "cost": 150, "text": "第三方集運 (預估)" },
-      "taxRate": 0.05,
-      "tags": [
-        { "text": "實體雙卡", "type": "special", "icon": "fa-sim-card" },
-        { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" }
-      ]
-    },
-    {
-      "id": "kr",
-      "country": "韓國",
-      "platform": "Coupang",
-      "flag": "🇰🇷",
-      "currency": "KRW",
-      "products": {
-        "128": { "price": 1250000, "link": "https://www.coupang.com/vp/products/128GB_PRODUCT_CODE" },
-        "256": { "price": 1400000, "link": "https://www.coupang.com/vp/products/256GB_PRODUCT_CODE" }
-      },
-      "shipping": { "cost": 30000, "text": "第三方集運 (預估)" },
+      "shipping": { "cost": 2500, "text": "Amazon 國際直郵" },
       "taxRate": 0.05,
       "tags": [
         { "text": "跨區無保固", "type": "warning", "icon": "fa-triangle-exclamation" }
