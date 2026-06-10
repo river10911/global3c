@@ -1,69 +1,66 @@
 {
-"iphone17": {
-"amazon_jp": {
-"platform": "Amazon JP",
-"country": "日本",
-"currency": "JPY",
-"price": 124800,
-"link": "https://www.amazon.co.jp/s?k=iPhone+17"
-},
-"gmarket": {
-"platform": "Gmarket",
-"country": "韓國",
-"currency": "KRW",
-"price": 1250000,
-"link": "https://browse.gmarket.co.kr/search?keyword=iPhone%2017"
-}
-},
-
-"iphone17pro": {
-"amazon_jp": {
-"platform": "Amazon JP",
-"country": "日本",
-"currency": "JPY",
-"price": 169800,
-"link": "https://www.amazon.co.jp/s?k=iPhone+17+Pro"
-},
-"gmarket": {
-"platform": "Gmarket",
-"country": "韓國",
-"currency": "KRW",
-"price": 1550000,
-"link": "https://browse.gmarket.co.kr/search?keyword=iPhone%2017%20Pro"
-}
-},
-
-"airpodspro": {
-"amazon_jp": {
-"platform": "Amazon JP",
-"country": "日本",
-"currency": "JPY",
-"price": 39800,
-"link": "https://www.amazon.co.jp/s?k=AirPods+Pro"
-},
-"gmarket": {
-"platform": "Gmarket",
-"country": "韓國",
-"currency": "KRW",
-"price": 289000,
-"link": "https://browse.gmarket.co.kr/search?keyword=AirPods%20Pro"
-}
-},
-
-"macbookair": {
-"amazon_jp": {
-"platform": "Amazon JP",
-"country": "日本",
-"currency": "JPY",
-"price": 164800,
-"link": "https://www.amazon.co.jp/s?k=MacBook+Air"
-},
-"gmarket": {
-"platform": "Gmarket",
-"country": "韓國",
-"currency": "KRW",
-"price": 1590000,
-"link": "https://browse.gmarket.co.kr/search?keyword=MacBook%20Air"
-}
-}
+  "iphone17": {
+    "amazon_jp": {
+      "platform": "Amazon JP",
+      "country": "日本",
+      "currency": "JPY",
+      "price": 123456,
+      "link": "https://www.amazon.co.jp/s?k=iPhone+17"
+    },
+    "gmarket": {
+      "platform": "Gmarket",
+      "country": "韓國",
+      "currency": "KRW",
+      "price": 1250000,
+      "link": "https://browse.gmarket.co.kr/search?keyword=iPhone%2017"
+    }
+  },
+  "iphone17pro": {
+    "amazon_jp": {
+      "platform": "Amazon JP",
+      "country": "日本",
+      "currency": "JPY",
+      "price": 169800,
+      "link": "https://www.amazon.co.jp/s?k=iPhone+17+Pro"
+    },
+    "gmarket": {
+      "platform": "Gmarket",
+      "country": "韓國",
+      "currency": "KRW",
+      "price": 1550000,
+      "link": "https://browse.gmarket.co.kr/search?keyword=iPhone%2017%20Pro"
+    }
+  },
+  "airpodspro": {
+    "amazon_jp": {
+      "platform": "Amazon JP",
+      "country": "日本",
+      "currency": "JPY",
+      "price": 39800,
+      "link": "https://www.amazon.co.jp/s?k=AirPods+Pro"
+    },
+    "gmarket": {
+      "platform": "Gmarket",
+      "country": "韓國",
+      "currency": "KRW",
+      "price": 289000,
+      "link": "https://browse.gmarket.co.kr/search?keyword=AirPods%20Pro"
+    }
+  },
+  "macbookair": {
+    "amazon_jp": {
+      "platform": "Amazon JP",
+      "country": "日本",
+      "currency": "JPY",
+      "price": 164800,
+      "link": "https://www.amazon.co.jp/s?k=MacBook+Air"
+    },
+    "gmarket": {
+      "platform": "Gmarket",
+      "country": "韓國",
+      "currency": "KRW",
+      "price": 1590000,
+      "link": "https://browse.gmarket.co.kr/search?keyword=MacBook%20Air"
+    }
+  }
 }
