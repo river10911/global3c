@@ -2,9 +2,9 @@ import json
 import requests
 from datetime import datetime
 
-URL = "https://open.er-api.com/v6/latest/USD"
+url = "https://open.er-api.com/v6/latest/USD"
 
-response = requests.get(URL, timeout=30)
+response = requests.get(url, timeout=30)
 data = response.json()
 
 exchange = {
@@ -16,20 +16,12 @@ exchange = {
 "KRW": data["rates"]["KRW"]
 }
 
-with open(
-"data/exchange.json",
-"w",
-encoding="utf-8"
-) as f:
-
-```
+with open("data/exchange.json", "w", encoding="utf-8") as f:
 json.dump(
-    exchange,
-    f,
-    ensure_ascii=False,
-    indent=2
+exchange,
+f,
+ensure_ascii=False,
+indent=2
 )
-```
 
-print("exchange.json updated successfully")
-
+print("exchange.json updated")
