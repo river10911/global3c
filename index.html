@@ -4,27 +4,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Global3C 全球 Apple 商品比價</title>
 
-<meta name="description" content="比較台灣、日本、韓國、香港、美國 Apple 商品價格與即時匯率換算">
+<meta name="description"
+content="全球 Apple 商品價格比較平台">
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header class="header">
     <div class="container">
-        <h1>🌎 Global3C</h1>
-        <p>全球 Apple 商品比價引擎</p>
-        <div id="rateStatus"></div>
-    </div>
+
+```
+    <h1>🌎 Global3C</h1>
+
+    <p>
+        全球 Apple 商品比價引擎
+    </p>
+
+    <div id="rateStatus"></div>
+
+</div>
+```
+
 </header>
 
 <section class="hero">
-    <div class="container">
 
-    <h2>搜尋全球 Apple 商品價格</h2>
+```
+<div class="container">
+
+    <h2>
+        搜尋全球 Apple 商品價格
+    </h2>
 
     <div class="search-box">
 
@@ -60,81 +76,94 @@
     </div>
 
 </div>
+```
 
 </section>
 
 <section class="container">
-    <div id="results"></div>
-</section>
 
-<!-- products.js 已停用 -->
+```
+<div id="results"></div>
+```
+
+</section>
 
 <script>
 
-let exchangeRates = {};
 let products = [];
 let prices = {};
+let exchangeRates = {};
 
-    async function loadData(){
-
-    const productsResponse =
-        await fetch("data/products.json");
-
-    products =
-        await productsResponse.json();
-
-    const pricesResponse =
-        await fetch("data/prices.json");
-
-    prices =
-        await pricesResponse.json();
-
-    const exchangeResponse =
-        await fetch("data/exchange.json");
-
-    exchangeRates =
-        await exchangeResponse.json();
-
-}
-async function loadExchangeRates(){
+async function loadData(){
 
     try{
 
-        const response =
-            await fetch(
-                'https://open.er-api.com/v6/latest/USD'
+        const productsResponse =
+            await fetch("data/products.json");
+
+        products =
+            await productsResponse.json();
+
+        const pricesResponse =
+            await fetch("data/prices.json");
+
+        prices =
+            await pricesResponse.json();
+
+        const exchangeResponse =
+            await fetch("data/exchange.json");
+
+        exchangeRates =
+            await exchangeResponse.json();
+
+        document
+            .getElementById("rateStatus")
+            .innerText =
+            "匯率更新：" +
+            (
+                exchangeRates.updated_at ||
+                "已載入"
             );
 
-        const data =
-            await response.json();
-
-        exchangeRates = {
-            USD:1,
-            JPY:data.rates.JPY,
-            KRW:data.rates.KRW,
-            HKD:data.rates.HKD,
-            TWD:data.rates.TWD
-        };
-
-        document.getElementById('rateStatus').innerText =
-            '匯率更新：' +
-            new Date().toLocaleString();
-
-    }catch(error){
-
-        document.getElementById('rateStatus').innerText =
-            '匯率載入失敗';
+    }
+    catch(error){
 
         console.error(error);
+
+        document
+            .getElementById("rateStatus")
+            .innerText =
+            "資料載入失敗";
 
     }
 
 }
 
+function quickSearch(keyword){
+
+    document
+        .getElementById("searchInput")
+        .value =
+        keyword;
+
+    searchProduct();
+
+}
+
 function convertToTWD(price,currency){
 
-    if(currency === 'TWD'){
+    if(currency==="TWD"){
+
         return price;
+
+    }
+
+    if(
+        !exchangeRates[currency]
+    ){
+
+        return 0;
+
     }
 
     const usdPrice =
@@ -148,82 +177,96 @@ function convertToTWD(price,currency){
 
 }
 
-function formatPrice(price,currency){
+function formatPrice(
+    price,
+    currency
+){
 
     switch(currency){
 
-        case 'JPY':
-            return '¥' + price.toLocaleString();
+        case "JPY":
+            return "¥" +
+                price.toLocaleString();
 
-        case 'KRW':
-            return '₩' + price.toLocaleString();
+        case "KRW":
+            return "₩" +
+                price.toLocaleString();
 
-        case 'HKD':
-            return 'HK$' + price.toLocaleString();
+        case "HKD":
+            return "HK$" +
+                price.toLocaleString();
 
-        case 'USD':
-            return 'US$' + price.toLocaleString();
+        case "USD":
+            return "US$" +
+                price.toLocaleString();
 
         default:
-            return 'NT$' + price.toLocaleString();
+            return "NT$" +
+                price.toLocaleString();
 
     }
-
-}
-
-function quickSearch(keyword){
-
-    document.getElementById('searchInput').value =
-        keyword;
-
-    searchProduct();
 
 }
 
 function searchProduct(){
 
-    if(
-        Object.keys(exchangeRates).length === 0
-    ){
-        alert('匯率尚未載入完成');
-        return;
-    }
-
     const keyword =
         document
-        .getElementById('searchInput')
+        .getElementById("searchInput")
         .value
         .trim()
         .toLowerCase();
 
     const resultDiv =
-        document.getElementById('results');
+        document
+        .getElementById("results");
 
-    let product = null;
+    const product =
+        products.find(item =>
 
-    for(const key in products){
+            item.keyword
+            .toLowerCase()
+            .includes(keyword)
 
-        if(
-            key.includes(keyword) ||
-            keyword.includes(key)
-        ){
-            product = products[key];
-            break;
-        }
+            ||
 
-    }
+            keyword.includes(
+                item.keyword
+                .toLowerCase()
+            )
+
+        );
 
     if(!product){
 
         resultDiv.innerHTML =
-            '<div class="empty">找不到商品資料</div>';
+        `
+        <div class="empty">
+            找不到商品資料
+        </div>
+        `;
 
         return;
-
     }
 
-    const prices =
-        product.prices.map(item => {
+    const priceData =
+        prices[product.id];
+
+    if(!priceData){
+
+        resultDiv.innerHTML =
+        `
+        <div class="empty">
+            尚未建立價格資料
+        </div>
+        `;
+
+        return;
+    }
+
+    const resultPrices =
+        Object.values(priceData)
+        .map(item => {
 
             return {
 
@@ -239,82 +282,115 @@ function searchProduct(){
 
         });
 
-    prices.sort(
-        (a,b)=>a.twd-b.twd
+    resultPrices.sort(
+        (a,b)=>
+        a.twd-b.twd
     );
 
-    let html = '';
+    let html =
+    `
+    <div class="product-header">
 
-    html +=
-        '<div class="product-header">' +
-        '<h2>' + product.name + '</h2>' +
-        '<p>共找到 ' + prices.length + ' 個市場價格</p>' +
-        '</div>';
+        <h2>
+            ${product.name}
+        </h2>
 
-    prices.forEach((item,index)=>{
+        <p>
+            共找到
+            ${resultPrices.length}
+            個市場價格
+        </p>
+
+    </div>
+    `;
+
+    resultPrices.forEach(
+        (
+            item,
+            index
+        )=>{
 
         html +=
-        '<div class="card">' +
+        `
+        <div class="card">
 
-            '<div class="card-top">' +
+            <div class="card-top">
 
-                '<div>' +
+                <div>
 
-                    '<h3>' +
-                    item.flag + ' ' +
-                    item.platform +
-                    '</h3>' +
+                    <h3>
+                        ${item.platform}
+                    </h3>
 
-                    '<small>' +
-                    item.country +
-                    '</small>' +
+                    <small>
+                        ${item.country}
+                    </small>
 
-                '</div>' +
+                </div>
 
-                (index===0
-                    ? '<span class="badge">最便宜</span>'
-                    : ''
-                ) +
+                ${
+                    index===0
+                    ?
+                    '<span class="badge">最便宜</span>'
+                    :
+                    ''
+                }
 
-            '</div>' +
+            </div>
 
-            '<div class="local-price">' +
-                formatPrice(
+            <div class="local-price">
+
+                ${formatPrice(
                     item.price,
                     item.currency
-                ) +
-            '</div>' +
+                )}
 
-            '<div class="price">' +
-                'NT$ ' +
-                item.twd.toLocaleString() +
-            '</div>' +
+            </div>
 
-            '<a class="btn-link" target="_blank" href="' +
-                item.link +
-            '">' +
-                '前往查看' +
-            '</a>' +
+            <div class="price">
 
-        '</div>';
+                NT$
+                ${item.twd.toLocaleString()}
+
+            </div>
+
+            <a
+                href="${item.link}"
+                target="_blank"
+                class="btn-link">
+
+                前往查看
+
+            </a>
+
+        </div>
+        `;
 
     });
 
-    resultDiv.innerHTML = html;
+    resultDiv.innerHTML =
+        html;
 
 }
 
 document
-.getElementById('searchInput')
+.getElementById(
+    "searchInput"
+)
 .addEventListener(
-'keypress',
-function(event){
+    "keypress",
+    function(event){
 
-    if(event.key === 'Enter'){
-        searchProduct();
+        if(
+            event.key==="Enter"
+        ){
+
+            searchProduct();
+
+        }
+
     }
-
-});
+);
 
 loadData();
 
