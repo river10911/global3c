@@ -110,6 +110,12 @@ async function loadData(){
         exchangeRates =
             await exchangeResponse.json();
 
+        console.log("Exchange Rates:");
+        console.log(exchangeRates);
+
+        console.log("JPY =", exchangeRates.JPY);
+        console.log("TWD =", exchangeRates.TWD);
+        
         let text =
 "匯率更新：" +
 (
