@@ -1,0 +1,22 @@
+[
+  {
+    "id": "iphone17",
+    "keyword": "iphone 17",
+    "name": "iPhone 17"
+  },
+  {
+    "id": "iphone17pro",
+    "keyword": "iphone 17 pro",
+    "name": "iPhone 17 Pro"
+  },
+  {
+    "id": "airpodspro",
+    "keyword": "airpods pro",
+    "name": "AirPods Pro"
+  },
+  {
+    "id": "macbookair",
+    "keyword": "macbook air",
+    "name": "MacBook Air"
+  }
+]
