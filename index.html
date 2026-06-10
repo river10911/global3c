@@ -110,14 +110,24 @@ async function loadData(){
         exchangeRates =
             await exchangeResponse.json();
 
-        document
-            .getElementById("rateStatus")
-            .innerText =
-            "匯率更新：" +
-            (
-                exchangeRates.updated_at ||
-                "已載入"
-            );
+        let text =
+"匯率更新：" +
+(
+    exchangeRates.updated_at ||
+    "已載入"
+);
+
+if(prices._system){
+
+    text +=
+    " ｜ 價格更新：" +
+    prices._system.last_price_update;
+
+}
+
+document
+.getElementById("rateStatus")
+.innerText = text;
 
     }
     catch(error){
