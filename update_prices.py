@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 with open(
     "data/prices.json",
@@ -7,7 +8,14 @@ with open(
 ) as f:
     prices = json.load(f)
 
-prices["iphone17"]["amazon_jp"]["price"] = 123456
+# 模擬抓到的新價格
+prices["iphone17"]["amazon_jp"]["price"] = 122800
+
+# 更新時間
+prices["_system"] = {
+    "last_price_update":
+    datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+}
 
 with open(
     "data/prices.json",
