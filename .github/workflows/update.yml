@@ -1,39 +1,36 @@
+:::writing{variant="document" id="71284"}
 name: Update Exchange Rates
 
 on:
-workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-update:
-runs-on: ubuntu-latest
+  update:
+    runs-on: ubuntu-latest
 
-```
-steps:
-  - name: Checkout Repository
-    uses: actions/checkout@v4
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-  - name: Setup Python
-    uses: actions/setup-python@v5
-    with:
-      python-version: "3.11"
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-  - name: Install Dependencies
-    run: |
-      pip install requests
+      - name: Install Dependencies
+        run: pip install requests
 
-  - name: Run Update Script
-    run: |
-      python update.py
+      - name: Run Update Script
+        run: python update.py
 
-  - name: Commit Updated Files
-    run: |
-      git config user.name "github-actions"
-      git config user.email "actions@github.com"
+      - name: Commit Changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
 
-      git add data/exchange.json
+          git add data/exchange.json
 
-      if ! git diff --staged --quiet; then
-        git commit -m "Auto update exchange rates"
-        git push
-      fi
-```
+          if ! git diff --staged --quiet; then
+            git commit -m "Auto update exchange rates"
+            git push
+          fi
