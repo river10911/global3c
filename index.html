@@ -67,12 +67,35 @@
     <div id="results"></div>
 </section>
 
-<script src="products.js"></script>
+<!-- products.js 已停用 -->
 
 <script>
 
 let exchangeRates = {};
+let products = [];
+let prices = {};
 
+    async function loadData(){
+
+    const productsResponse =
+        await fetch("data/products.json");
+
+    products =
+        await productsResponse.json();
+
+    const pricesResponse =
+        await fetch("data/prices.json");
+
+    prices =
+        await pricesResponse.json();
+
+    const exchangeResponse =
+        await fetch("data/exchange.json");
+
+    exchangeRates =
+        await exchangeResponse.json();
+
+}
 async function loadExchangeRates(){
 
     try{
@@ -293,7 +316,7 @@ function(event){
 
 });
 
-loadExchangeRates();
+loadData();
 
 </script>
 
